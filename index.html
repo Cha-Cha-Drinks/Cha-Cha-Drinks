@@ -3,49 +3,44 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>cha cha Horchata</title>
+    <title>Cha Cha Horchata</title>
     <meta
       name="description"
-      content="cha cha Horchata is a creamy cinnamon, rice, and vanilla drink rooted in Mexican tradition."
+      content="Cha Cha Horchata is a creamy cinnamon, rice, and vanilla drink rooted in Mexican tradition."
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.2.0/css/all.css">
+    <link rel="stylesheet" href="styles.css?v=single-drink-photos">
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="cha cha home">
-        <span class="brand-mark" aria-hidden="true"></span>
+      <a class="brand" href="#top" aria-label="Cha Cha home">
+        <img class="brand-mark" src="assets/chacha-skull-logo.png" alt="" aria-hidden="true">
         <span class="brand-stack" aria-hidden="true">
-          <span>cha</span>
-          <span>cha</span>
+          <span>Cha</span>
+          <span>Cha</span>
         </span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
-        <span></span>
-        <span></span>
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
       <nav class="nav" data-nav aria-label="Primary navigation">
-        <a href="#shop">Shop</a>
         <a href="#story">Story</a>
-        <a href="#flavors">Flavors</a>
-        <a href="#stockists">Stockists</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#ice-cream">Ice Cream</a>
       </nav>
-      <a class="header-cta" href="#stockists">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 21s7-5.3 7-11a7 7 0 0 0-14 0c0 5.7 7 11 7 11Z"></path>
-          <circle cx="12" cy="10" r="2.6"></circle>
-        </svg>
-        Find cha cha
-      </a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
-          <img src="assets/hero-cha-cha.png" alt="">
+          <img src="assets/hero-horchata.png" alt="">
         </div>
         <div class="hero-content">
           <h1 id="hero-title">
-            <span class="hero-brand">cha<br>cha</span>
+            <span class="hero-brand">Cha<br>Cha</span>
             <span class="product-word">horchata</span>
           </h1>
           <p>
@@ -53,71 +48,222 @@
             for a creamy, refreshing taste that brings us all together.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#flavors">Taste the Tradition</a>
-            <a class="button secondary" href="#flavors">See Flavors</a>
+            <a class="button primary" href="#drinks">
+              <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+              Taste the Tradition
+            </a>
+            <a class="button secondary" href="#drinks">
+              <i class="fa-solid fa-bottle-water" aria-hidden="true"></i>
+              See Products
+            </a>
           </div>
         </div>
-        <a class="scroll-cue" href="#flavors" aria-label="Scroll to flavors">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m6 9 6 6 6-6"></path>
-          </svg>
+        <a class="scroll-cue" href="#drinks" aria-label="Scroll to drinks">
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
         </a>
       </section>
 
-      <section class="section flavors" id="flavors" aria-labelledby="flavors-title">
+      <section class="section flavors drinks" id="drinks" aria-labelledby="drinks-title">
         <div class="section-heading">
-          <h2 id="flavors-title">Flavors</h2>
-          <p>Timeless taste. Made with simple, real ingredients.</p>
+          <h2 id="drinks-title">
+            <i class="fa-solid fa-seedling heading-flourish heading-flourish-left" aria-hidden="true"></i>
+            <span>Drinks</span>
+            <i class="fa-solid fa-seedling heading-flourish heading-flourish-right" aria-hidden="true"></i>
+          </h2>
+          <p>Each flavor comes in two drink sizes: 12 oz cans and 16 oz glass bottles.</p>
         </div>
-        <div class="flavor-grid">
-          <article class="flavor-card flavor-classic">
-            <figure class="product-photo">
-              <img src="assets/flavor-tradicional.png" alt="12 oz can and 16 oz glass bottle of cha cha Tradicional horchata">
+        <div class="drink-row-label">
+          <i class="fa-solid fa-can-food" aria-hidden="true"></i>
+          <span>12 oz cans</span>
+        </div>
+        <div class="flavor-grid drink-grid drink-can-grid">
+          <article class="flavor-card drink-card flavor-classic product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-tradicional-can.png" alt="ChaCha Tradicional horchata 12 oz can">
             </figure>
             <h3>Tradicional</h3>
-            <p class="package-sizes">12 oz cans + 16 oz glass bottles</p>
-            <p>Cinnamon, rice, vanilla. The classic done right.</p>
-            <a href="#stockists">Shop Now</a>
+            <p class="package-sizes">12 oz can</p>
+            <p>Cinnamon, rice, vanilla in a ready-to-chill can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </article>
-          <article class="flavor-card flavor-fresa">
-            <figure class="product-photo">
-              <img src="assets/flavor-fresa.png" alt="12 oz can and 16 oz glass bottle of cha cha Fresa horchata">
+          <article class="flavor-card drink-card flavor-fresa product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-fresa-can.png" alt="ChaCha Fresa horchata 12 oz can">
             </figure>
             <h3>Fresa</h3>
-            <p class="package-sizes">12 oz cans + 16 oz glass bottles</p>
-            <p>Sweet strawberry with a creamy finish.</p>
-            <a href="#stockists">Shop Now</a>
+            <p class="package-sizes">12 oz can</p>
+            <p>Sweet strawberry with a creamy finish in a can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </article>
-          <article class="flavor-card flavor-matcha">
-            <figure class="product-photo">
-              <img src="assets/flavor-matcha.png" alt="12 oz can and 16 oz glass bottle of cha cha Matcha horchata">
+          <article class="flavor-card drink-card flavor-mint product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-menta-can.png" alt="ChaCha Menta mint horchata 12 oz can">
             </figure>
-            <h3>Matcha</h3>
-            <p class="package-sizes">12 oz cans + 16 oz glass bottles</p>
-            <p>Earthy green tea with a hint of vanilla.</p>
-            <a href="#stockists">Shop Now</a>
+            <h3>Menta</h3>
+            <p class="package-sizes">12 oz can</p>
+            <p>Refreshing mint with a smooth finish in a can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </article>
-          <article class="flavor-card flavor-chocolate">
-            <figure class="product-photo">
-              <img src="assets/flavor-chocolate.png" alt="12 oz can and 16 oz glass bottle of cha cha Chocolate horchata">
+          <article class="flavor-card drink-card flavor-chocolate product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-chocolate-can.png" alt="ChaCha Chocolate horchata 12 oz can">
             </figure>
             <h3>Chocolate</h3>
-            <p class="package-sizes">12 oz cans + 16 oz glass bottles</p>
-            <p>Rich cocoa with warm cinnamon.</p>
-            <a href="#stockists">Shop Now</a>
+            <p class="package-sizes">12 oz can</p>
+            <p>Rich cocoa with warm cinnamon in a can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </article>
-          <article class="flavor-card flavor-coco">
-            <figure class="product-photo">
-              <img src="assets/flavor-coco.png" alt="12 oz can and 16 oz glass bottle of cha cha Coco horchata">
+          <article class="flavor-card drink-card flavor-coco product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-coco-can.png" alt="ChaCha Coco horchata 12 oz can">
             </figure>
             <h3>Coco</h3>
-            <p class="package-sizes">12 oz cans + 16 oz glass bottles</p>
-            <p>Toasted coconut with a smooth finish.</p>
-            <a href="#stockists">Shop Now</a>
+            <p class="package-sizes">12 oz can</p>
+            <p>Toasted coconut with a smooth finish in a can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-caramel product-can">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-caramel-can.png" alt="ChaCha Caramel horchata 12 oz can">
+            </figure>
+            <h3>Caramel</h3>
+            <p class="package-sizes">12 oz can</p>
+            <p>Buttery caramel with cinnamon and creamy rice in a can.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+        </div>
+        <div class="drink-row-label">
+          <i class="fa-solid fa-bottle-water" aria-hidden="true"></i>
+          <span>16 oz glass bottles</span>
+        </div>
+        <div class="flavor-grid drink-grid drink-bottle-grid">
+          <article class="flavor-card drink-card flavor-classic product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-tradicional-bottle.png" alt="ChaCha Tradicional horchata 16 oz glass bottle">
+            </figure>
+            <h3>Tradicional</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Cinnamon, rice, vanilla in the signature glass bottle.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-fresa product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-fresa-bottle.png" alt="ChaCha Fresa horchata 16 oz glass bottle">
+            </figure>
+            <h3>Fresa</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Sweet strawberry with a creamy finish in glass.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-mint product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-menta-bottle.png" alt="ChaCha Menta mint horchata 16 oz glass bottle">
+            </figure>
+            <h3>Menta</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Refreshing mint with a smooth finish in glass.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-chocolate product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-chocolate-bottle.png" alt="ChaCha Chocolate horchata 16 oz glass bottle">
+            </figure>
+            <h3>Chocolate</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Rich cocoa with warm cinnamon in glass.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-coco product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-coco-bottle.png" alt="ChaCha Coco horchata 16 oz glass bottle">
+            </figure>
+            <h3>Coco</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Toasted coconut with a smooth finish in glass.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card drink-card flavor-caramel product-bottle">
+            <figure class="product-photo drink-photo">
+              <img src="assets/drink-caramel-bottle.png" alt="ChaCha Caramel horchata 16 oz glass bottle">
+            </figure>
+            <h3>Caramel</h3>
+            <p class="package-sizes">16 oz glass bottle</p>
+            <p>Buttery caramel with cinnamon and creamy rice in glass.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
           </article>
         </div>
         <div class="center-action">
-          <a class="button outline" href="#shop">View All Flavors</a>
+          <a class="button outline" href="#ice-cream">
+            <i class="fa-solid fa-ice-cream" aria-hidden="true"></i>
+            See Ice Cream
+          </a>
+        </div>
+      </section>
+
+      <section class="section ice-cream" id="ice-cream" aria-labelledby="ice-cream-title">
+        <div class="section-heading">
+          <h2 id="ice-cream-title">
+            <i class="fa-solid fa-seedling heading-flourish heading-flourish-left" aria-hidden="true"></i>
+            <span>Ice Cream</span>
+            <i class="fa-solid fa-seedling heading-flourish heading-flourish-right" aria-hidden="true"></i>
+          </h2>
+          <p>Six creamy scoops inspired by the same simple, real ingredients.</p>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor-card ice-card flavor-classic">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-tradicional.png" alt="ChaCha Tradicional ice cream cup">
+            </figure>
+            <h3>Tradicional</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Cinnamon, rice, vanilla. The classic scoop.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card ice-card flavor-fresa">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-fresa.png" alt="ChaCha Fresa ice cream cup">
+            </figure>
+            <h3>Fresa</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Sweet strawberry with a creamy finish.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card ice-card flavor-mint">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-menta.png" alt="ChaCha Menta mint ice cream cup">
+            </figure>
+            <h3>Menta</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Refreshing mint with a smooth finish.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card ice-card flavor-chocolate">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-chocolate.png" alt="ChaCha Chocolate ice cream cup">
+            </figure>
+            <h3>Chocolate</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Rich cocoa with warm cinnamon.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card ice-card flavor-coco">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-coco.png" alt="ChaCha Coco ice cream cup">
+            </figure>
+            <h3>Coco</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Toasted coconut with a smooth finish.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
+          <article class="flavor-card ice-card flavor-caramel">
+            <figure class="product-photo ice-photo">
+              <img src="assets/ice-caramel.png" alt="ChaCha Caramel ice cream cup">
+            </figure>
+            <h3>Caramel</h3>
+            <p class="package-sizes">3 oz cups</p>
+            <p>Buttery caramel with cinnamon and creamy rice.</p>
+            <span class="card-cta">Coming Soon <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </article>
         </div>
       </section>
 
@@ -127,14 +273,17 @@
         <div class="story-copy">
           <h2 id="story-title">Our Story</h2>
           <p>
-            cha cha started in our abuela's kitchen, where horchata was more than a drink. It was
+            Cha Cha started in our abuela's kitchen, where horchata was more than a drink. It was
             love in every glass.
           </p>
           <p>
             Made from humble ingredients and shared at every celebration, our recipe keeps that
             tradition alive with craft, care, and a little dance.
           </p>
-          <a class="button primary compact" href="#ingredients">Our Story</a>
+          <a class="button primary compact" href="#ingredients">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+            Our Story
+          </a>
         </div>
         <figure class="story-image">
           <img src="assets/story-family.png" alt="Family preparing horchata in a tiled Mexican courtyard kitchen">
@@ -169,68 +318,34 @@
         </div>
       </section>
 
-      <section class="stockists" id="stockists" aria-labelledby="stockists-title">
-        <div class="stockist-panel">
-          <h2 id="stockists-title">Find cha cha Near You</h2>
-          <p>We're in cafes, mercados, and stores across the country.</p>
-          <form class="locator" data-locator>
-            <label>
-              <span class="sr-only">City or zip code</span>
-              <input name="location" type="text" placeholder="Enter your city or zip code" autocomplete="postal-code">
-            </label>
-            <button type="submit" aria-label="Search locations">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="11" cy="11" r="6"></circle>
-                <path d="m16 16 4 4"></path>
-              </svg>
-            </button>
-          </form>
-          <p class="locator-message" data-locator-message aria-live="polite"></p>
-        </div>
-        <div class="map-card" aria-label="Map of cha cha locations">
-          <span class="pin p1"></span>
-          <span class="pin p2"></span>
-          <span class="pin p3"></span>
-          <span class="pin p4"></span>
-          <span class="pin p5"></span>
-          <span class="pin p6"></span>
-          <span class="pin p7"></span>
-          <span class="pin p8"></span>
-          <span class="pin p9"></span>
-          <span class="pin p10"></span>
-        </div>
-        <aside class="amor-card" aria-label="Hecha con amor">
-          <p>Hecha con amor para nuestra comunidad</p>
-        </aside>
-      </section>
     </main>
 
     <footer class="footer">
       <div class="footer-brand">
         <span class="brand footer-logo">
+          <img class="brand-mark" src="assets/chacha-skull-logo.png" alt="" aria-hidden="true">
           <span class="brand-stack" aria-hidden="true">
-            <span>cha</span>
-            <span>cha</span>
+            <span>Cha</span>
+            <span>Cha</span>
           </span>
         </span>
         <p>Horchata rooted in tradition and made for today.</p>
         <div class="socials" aria-label="Social links">
-          <a href="#" aria-label="Instagram">Ig</a>
-          <a href="#" aria-label="Facebook">Fb</a>
-          <a href="#" aria-label="TikTok">Tk</a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
         </div>
       </div>
       <nav aria-label="Shop links">
         <h2>Shop</h2>
-        <a href="#flavors">All Products</a>
-        <a href="#flavors">Bundles</a>
-        <a href="#stockists">Stockists</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#ice-cream">Ice Cream</a>
+        <a href="#drinks">Bundles</a>
       </nav>
       <nav aria-label="Learn links">
         <h2>Learn</h2>
         <a href="#story">Our Story</a>
         <a href="#ingredients">Ingredients</a>
-        <a href="#stockists">FAQs</a>
       </nav>
       <form class="newsletter">
         <h2>Join the Celebration</h2>
@@ -240,7 +355,10 @@
             <span class="sr-only">Email address</span>
             <input type="email" placeholder="Enter your email">
           </label>
-          <button type="submit">Subscribe</button>
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Subscribe
+          </button>
         </div>
       </form>
     </footer>

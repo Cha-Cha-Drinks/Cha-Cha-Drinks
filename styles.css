@@ -11,8 +11,10 @@
   --paper: #fffaf0;
   --line: rgba(48, 22, 15, 0.18);
   --shadow: 0 18px 50px rgba(48, 22, 15, 0.18);
-  --serif: Georgia, "Times New Roman", serif;
-  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: "Cooper Black", "Bree Serif", Georgia, "Times New Roman", serif;
+  --serif: "Cooper Black", "Bree Serif", Georgia, "Times New Roman", serif;
+  --sans: "Barlow Condensed", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --body: "Barlow Condensed", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -25,10 +27,11 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--crema);
   color: var(--cacao);
-  font-family: var(--sans);
-  font-size: 16px;
+  font-family: var(--body);
+  font-size: 18px;
   line-height: 1.55;
 }
 
@@ -52,7 +55,7 @@ input {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 28px;
   padding: 14px clamp(18px, 5vw, 64px);
@@ -64,11 +67,11 @@ input {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: var(--navy);
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(1.55rem, 3vw, 2.35rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 0.82;
 }
 
@@ -76,21 +79,13 @@ input {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  text-transform: lowercase;
 }
 
 .brand-mark {
-  width: 22px;
-  height: 30px;
-  background:
-    radial-gradient(circle at 50% 12%, var(--flame) 0 17%, transparent 18%),
-    radial-gradient(circle at 23% 43%, var(--hibiscus) 0 15%, transparent 16%),
-    radial-gradient(circle at 77% 43%, var(--marigold) 0 15%, transparent 16%),
-    linear-gradient(var(--agave), var(--agave));
-  background-size: 100% 100%, 100% 100%, 100% 100%, 4px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(-18deg);
+  width: clamp(38px, 4vw, 52px);
+  height: clamp(38px, 4vw, 52px);
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(48, 22, 15, 0.14));
 }
 
 .nav {
@@ -99,8 +94,10 @@ input {
   align-items: center;
   gap: clamp(18px, 4vw, 54px);
   color: #0e2237;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .nav a {
@@ -142,18 +139,17 @@ input {
   box-shadow: 0 10px 22px rgba(210, 31, 104, 0.25);
   font-size: 0.94rem;
   font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
-.header-cta svg,
-.locator svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.button i,
+.newsletter button i,
+.socials i,
+.scroll-cue i,
+.menu-toggle i {
+  line-height: 1;
 }
 
 .menu-toggle {
@@ -210,7 +206,7 @@ h1,
 h2 {
   color: var(--navy);
   font-family: var(--serif);
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0;
 }
 
@@ -229,7 +225,7 @@ h1 {
 .hero-brand {
   color: var(--navy);
   line-height: 0.78;
-  text-transform: lowercase;
+  font-family: var(--display);
 }
 
 .product-word {
@@ -243,7 +239,7 @@ h1 {
   margin-bottom: 34px;
   color: #23150f;
   font-size: clamp(1rem, 1.8vw, 1.25rem);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .hero-actions {
@@ -286,23 +282,25 @@ h1 {
   transform: translateX(-50%);
 }
 
-.scroll-cue svg {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.scroll-cue i {
+  font-size: 1.35rem;
 }
 
 .section {
+  scroll-margin-top: 94px;
   padding: clamp(48px, 7vw, 86px) clamp(18px, 5vw, 64px);
+}
+
+.flavors,
+.ice-cream {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 244, 220, 0.78) 0 210px, transparent 430px),
+    linear-gradient(180deg, #fffdf8 0%, #fffaf0 100%);
 }
 
 .section-heading {
   max-width: 760px;
-  margin: 0 auto 30px;
+  margin: 0 auto 34px;
   text-align: center;
 }
 
@@ -314,109 +312,228 @@ h1 {
   line-height: 0.98;
 }
 
+.flavors .section-heading h2,
+.ice-cream .section-heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.5vw, 28px);
+  margin-bottom: 0;
+  font-size: clamp(3.4rem, 7.6vw, 6.15rem);
+  line-height: 0.9;
+}
+
+.heading-flourish {
+  color: var(--flame);
+  font-size: clamp(1.65rem, 3vw, 2.7rem);
+  transform-origin: center;
+}
+
+.heading-flourish-left {
+  transform: rotate(-82deg) scaleX(-1);
+}
+
+.heading-flourish-right {
+  transform: rotate(82deg);
+}
+
 .section-heading p {
   margin: 0;
-  color: #4b372c;
-  font-size: 1.12rem;
+  color: var(--navy);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 700;
 }
 
 .flavor-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 22px;
-  max-width: 1280px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
+.drink-row-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1440px;
+  margin: 34px auto 18px;
+  color: var(--flame);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.drink-row-label:first-of-type {
+  margin-top: 20px;
+}
+
+.drink-grid + .drink-row-label {
+  padding-top: 22px;
+  border-top: 2px dotted rgba(210, 31, 104, 0.24);
+}
+
 .flavor-card {
-  display: grid;
-  min-height: 430px;
-  grid-template-rows: 180px auto auto auto auto;
-  padding: 18px;
-  border: 1px solid rgba(48, 22, 15, 0.13);
-  border-radius: 8px;
-  background: var(--paper);
-  box-shadow: 0 14px 34px rgba(48, 22, 15, 0.09);
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  padding: 0 12px 26px;
+  border: 0;
+  border-right: 1px solid rgba(48, 22, 15, 0.12);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   text-align: center;
 }
 
+.flavor-card:nth-child(6n) {
+  border-right: 0;
+}
+
 .flavor-classic {
-  --flavor: #d21f68;
-  --flavor-soft: #ffd3e4;
+  --flavor: var(--navy);
+  --flavor-soft: #ffd997;
 }
 
 .flavor-fresa {
-  --flavor: #c21d59;
-  --flavor-soft: #f5c5cf;
+  --flavor: #d21f68;
+  --flavor-soft: #ffb8c9;
 }
 
-.flavor-matcha {
-  --flavor: #557a3c;
-  --flavor-soft: #cfdda6;
+.flavor-mint {
+  --flavor: #1d641d;
+  --flavor-soft: #cfe59a;
 }
 
 .flavor-chocolate {
-  --flavor: #764223;
-  --flavor-soft: #d9b38d;
+  --flavor: #6e2f16;
+  --flavor-soft: #b7713c;
 }
 
 .flavor-coco {
-  --flavor: #6f4aa3;
-  --flavor-soft: #d8c8ed;
+  --flavor: #7652b8;
+  --flavor-soft: #c4a0da;
+}
+
+.flavor-caramel {
+  --flavor: #b15b16;
+  --flavor-soft: #e4a855;
 }
 
 .flavor-card h3 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--flavor);
-  font-family: var(--serif);
-  font-size: 1.55rem;
+  font-family: var(--sans);
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  font-weight: 800;
   line-height: 1;
 }
 
 .product-photo {
   align-self: start;
   width: 100%;
-  height: 170px;
-  margin: 0 0 16px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  margin: 0 0 22px;
   overflow: hidden;
-  border-radius: 8px;
-  background: #f6dfeb;
-  box-shadow: inset 0 0 0 1px rgba(48, 22, 15, 0.08);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.38) 0 90px, transparent 210px),
+    var(--flavor-soft);
+  box-shadow: 0 18px 40px rgba(48, 22, 15, 0.12);
 }
 
 .product-photo img {
+  max-width: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.drink-card .product-photo img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  transform: none;
+}
+
+.drink-card .product-photo {
+  aspect-ratio: 4 / 5;
+}
+
+.product-can .product-photo img {
   object-position: center;
+  transform: none;
+}
+
+.product-bottle .product-photo img {
+  object-position: center;
+  transform: none;
+}
+
+.ice-photo {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.35) 0 88px, transparent 210px),
+    var(--flavor-soft);
+}
+
+.ice-cream .ice-card .product-photo img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none !important;
 }
 
 .package-sizes {
-  margin-bottom: 8px;
-  color: var(--hibiscus);
-  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 0.92rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .flavor-card p {
-  margin-bottom: 18px;
-  color: #4c382c;
-  font-size: 0.96rem;
+  max-width: 210px;
+  margin: 0 auto 22px;
+  color: var(--navy);
+  font-size: clamp(1.05rem, 1.35vw, 1.18rem);
+  font-weight: 600;
   line-height: 1.35;
 }
 
-.flavor-card a {
+.card-cta {
+  display: inline-flex;
   align-self: end;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
   color: var(--flavor);
-  font-weight: 800;
+  font-size: 1.12rem;
+  font-weight: 900;
+  text-transform: none;
+}
+
+.card-cta i {
+  align-self: center;
+  font-size: 0.9em;
 }
 
 .center-action {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 34px;
+}
+
+.center-action .button {
+  min-width: min(340px, 100%);
+  min-height: 58px;
+  font-size: 1.28rem;
 }
 
 .tile-divider {
@@ -446,7 +563,7 @@ h1 {
 .story-copy p {
   max-width: 390px;
   color: #3f2d24;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .story-image {
@@ -499,12 +616,14 @@ h1 {
   color: var(--navy);
   font-family: var(--serif);
   font-size: 1.35rem;
+  font-weight: 400;
 }
 
 .ingredient-row p {
   margin: 0;
   color: #4a3529;
-  font-size: 0.96rem;
+  font-size: 1.02rem;
+  font-weight: 600;
 }
 
 .stockists {
@@ -673,6 +792,9 @@ h1 {
   margin: 0 0 12px;
   color: #fff8e7;
   font-size: 1rem;
+  font-family: var(--sans);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .footer nav,
@@ -685,7 +807,7 @@ h1 {
 
 .footer a {
   color: rgba(255, 248, 231, 0.78);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .socials {
@@ -701,7 +823,7 @@ h1 {
   border: 1px solid rgba(255, 248, 231, 0.55);
   border-radius: 999px;
   color: #fff8e7;
-  font-size: 0.78rem;
+  font-size: 1rem;
 }
 
 .newsletter div {
@@ -781,19 +903,11 @@ h1 {
     background: #fffaf0;
   }
 
-  .menu-toggle span {
-    width: 20px;
-    height: 2px;
-    background: var(--navy);
-  }
-
-  .nav,
-  .header-cta {
+  .nav {
     display: none;
   }
 
-  .site-header.is-open .nav,
-  .site-header.is-open .header-cta {
+  .site-header.is-open .nav {
     display: flex;
     grid-column: 1 / -1;
     justify-self: stretch;
